@@ -1,0 +1,203 @@
+//For a beginner using npm (not yarn), I think I'd boil the "get up and running" information in the pages referenced below, to this:
+
++++++++++++++++++++++++++++++++++++++++++++++++
+
+//Creating an App: 
+//npx create-react-app my-app
+
++++++++++++++++++++++++++++++++++++++++++++++++
+
+//Once the installation is done, you can open your project folder:
+//cd my-app
+
++++++++++++++++++++++++++++++++++++++++++++++++
+
+Inside the newly created project, you can run some built-in commands:
+
+//npm start or yarn start
+//Runs the app in development mode.
+//Open http://localhost:3000 to view it in the browser.
+//THIS LOOKS LIKE SOME SORT OF ALTERNATIVE TO LIVESERVER
+
++++++++++++++++++++++++++++++++++++++++++++++++
+
+//npm test or yarn test
+//Runs the test watcher in an interactive mode. By default, runs tests related to files changed since the last commit.
+//I DON'T KNOW WHAT THIS MEANS (YET)
+
++++++++++++++++++++++++++++++++++++++++++++++++
+
+//npm run build or yarn build
+//Builds the app for production to the build folder. It correctly bundles React in production mode and optimizes the build for the best performance.
+//The build is minified and the filenames include the hashes.
+//Your app is ready to be deployed.
+
+===================================================================================================================================
+===================================================================================================================================
+===================================================================================================================================
+===================================================================================================================================
+===================================================================================================================================
+===================================================================================================================================
+//So here goes, this is what I did in my first attempt to get React up and running on my machine via Visual Studio Code
+
+1) Open command prompt, and type "cd " on command line, then drag relevant file into command prompt window, then press enter.
+I'm now in the correct directory, and my command like looks like this
+"C:\Users\Pete\Documents\Coding from 20200318 onwards\20200318 Work in progress\20200408 React App from scratch"
+
+2) On command line type 
+
+npx create-react-app your-app-name 
+
+(NB - Obviously, replace "your-app-name" above with something more descriptive and specific to your project. 
+Also, don't include any uppercase letters in your app name (this isn't allowed, and if you do the project generation will fail))
+
+and press enter
+
+Something is downloading !!!! Installing react, react-dom, babel etc. packages!!!!! 
+I also see "jest" "lodash" and "lint" modules loading?
+
+Also a message "initialised a git repository"
+Also my-app appears as a file in the folder!
+
+When it's done we get the following message:
+
+Created git commit.
+
+Success! Created my-app at C:\Users\Pete\Documents\Coding from 20200318 onwards\20200318 Work in progress\20200408 React App from scratch\my-app
+Inside that directory, you can run several commands:
+
+  npm start
+    Starts the development server.
+
+  npm run build
+    Bundles the app into static files for production.
+
+  npm test
+    Starts the test runner.
+
+  npm run eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+
+We suggest that you begin by typing:
+
+  cd my-app
+  npm start
+
+Happy hacking!
+
+C:\Users\Pete\Documents\Coding from 20200318 onwards\20200318 Work in progress\20200408 React App from scratch>
+
+3) I look in github, but do not see an additional repository. However, there is a .git folder in 
+C:\Users\Pete\Documents\Coding from 20200318 onwards\20200318 Work in progress\20200408 React App from scratch\my-app
+
+    To link the React work you've created on your machine with github, here are the steps you need to take:
+
+    3.1) Go into github and create a new repository that you're going to use to house your new work remotely on github. It's
+    a good idea to have the name match the filename you've used on yoru machine.
+
+    3.2) When you've created a new repository on github, then you need to link this repository with the local file on your 
+    machine. There are a number of ways to do this, in this case I'm going to use the method which is given to you when you create
+    the github repository (which is as follows).
+
+    3.3) Open GitBash on the local file on your machine, then use the command "git remote add origin" followed by the link 
+    supplied by github (which will look something like this "https://github.com/peter-lancaster/meme-generator-app.git"), and press
+    enter.
+
+    3.4) Check git status, and then use "git add ." and "git commit (if you need to)", and when you're ready, then use the command 
+    "git push -u origin master", and click enter.
+
+    3.5) Thats it. I think that future pushes will be fine with "git push origin master" (you won't need to include the "-u"). 
+    This view comes from here https://www.reddit.com/r/git/comments/3z43fa/in_the_command_git_push_u_origin_master_what_does/
+
+            "In the command "git push -u origin master", what does "-u" stand for?
+
+            Hi,
+
+            I apologize for this dumb question but I couldn't find the answer anywhere. What does "-u" do 
+            in "git push -u origin master"?
+            The command works just fine without using the -u flag. What is it's purpose? Also, where can 
+            I find the documentation for more flags like this? Thank you.
+            ·
+            4 years ago
+
+            "Upstream" is a reference that specifies which branch on which remote repository a local branch tracks. In effect, 
+            it represents a 'link' between the local and remote branches.
+
+            The command "git push -u origin master" sets the upstream of the current local branch, so that it tracks the master 
+            branch of the remote repository origin.
+
+            Typically, you only need to set the upstream once. Once it has been set, the "-u" is superfluous. Indeed, so is 
+            "origin master"; once you've set the upstream on the local branch, you can simply use "git push". The default 
+            target for push (and pull) is the upstream branch (unless you change the default settings).
+
+            Personally, whenever I create a new branch that I also want on a remote, the first command I run after checking 
+            out that new branch is "git push -u [remote name] [branch name]". Not only does that set the upstream for the 
+            branch, but if that branch name doesn't exist on the remote, Git creates it.
+
+
+4) Taking the suggestion above, I type on the command line "cd my-app", then enter. 
+
+This successfully changes directory to "C:\Users\Pete\Documents\Coding from 20200318 onwards\20200318 Work in progress\20200408 React App from scratch\my-app"
+
+now I type "npm start" and I get a liveserver type experience in the Chrome Browser, http://localhost:3000/ . 
+
+The command prompt is no longer calling itself "command prompt", instead the top of the command prompt window just says "npm". 
+
+5) It looks like the modules you need to be working on are held in "src/App.js"
+
+Thats all in this document for now - refer to README.md for further setup information.
+
+===================================================================================================================================
+===================================================================================================================================
+===================================================================================================================================
+===================================================================================================================================
+
+//This is where I got the instructions on how to create a React App. https://reactjs.org/docs/create-a-new-react-app.html 
+//You're looking for the "Create React App" section, about 1/3 of the way down the page: 
+
+Create React App
+
+Create React App is a comfortable environment for learning React, and is the best way to start building a new single-page application in React.
+
+It sets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, 
+and optimizes your app for production. You’ll need to have Node >= 8.10 and npm >= 5.6 on your machine. To create a project, run:
+
+npx create-react-app my-app
+cd my-app
+npm start
+Note
+
+npx on the first line is not a typo — it’s a package runner tool that comes with npm 5.2+.
+
+Create React App doesn’t handle backend logic or databases; it just creates a frontend build pipeline, so you can use it with 
+any backend you want. Under the hood, it uses Babel and webpack, but you don’t need to know anything about them.
+
+When you’re ready to deploy to production, running npm run build will create an optimized build of your app in the build folder. 
+You can learn more about Create React App from its README and the User Guide.
+
+================================================================================================================================
+//Also, further down the page, we have this : 
+
+Creating a Toolchain from Scratch
+A JavaScript build toolchain typically consists of:
+
+A package manager, such as Yarn or npm. It lets you take advantage of a vast ecosystem of third-party packages, 
+and easily install or update them.
+
+A bundler, such as webpack or Parcel. It lets you write modular code and bundle it together into small packages to optimize load time.
+
+A compiler such as Babel. It lets you write modern JavaScript code that still works in older browsers.
+
+If you prefer to set up your own JavaScript toolchain from scratch, check out this guide that re-creates some of the Create React App functionality.
+
+Don’t forget to ensure your custom toolchain is correctly set up for production.
+
+//So it looks like using React on new Apps used to be a convoluted process, and create-react-app is Facebooks answer to that.
+
+================================================================================================================================
+//These pages are also very useful: 
+
+https://create-react-app.dev/docs/getting-started
+
+https://github.com/facebook/create-react-app#create-react-app--
